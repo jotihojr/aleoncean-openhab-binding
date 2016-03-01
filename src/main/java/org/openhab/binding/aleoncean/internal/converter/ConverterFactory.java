@@ -149,7 +149,8 @@ public class ConverterFactory {
     }
 
     private static String getConverterConverterParameter(final Class<? extends StandardConverter> conv) {
-        return (String) getConverterStaticField(conv, FIELD_CONV_PARAM);
+        String returnString = (String) getConverterStaticField(conv, FIELD_CONV_PARAM);
+        return (returnString == null) ? "" : returnString;
     }
 
     private static boolean checkParameter(final Class<? extends StandardConverter> converterClass,
