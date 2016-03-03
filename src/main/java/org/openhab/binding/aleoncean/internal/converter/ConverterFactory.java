@@ -25,6 +25,7 @@ import java.util.List;
 import org.openhab.binding.aleoncean.internal.ActionIn;
 import org.openhab.binding.aleoncean.internal.converter.paramcitemc.OpenClosedContactItem;
 import org.openhab.binding.aleoncean.internal.converter.paramcitemc.RockerSwitchActionRollerShutterItem;
+import org.openhab.binding.aleoncean.internal.converter.paramcitemc.RockerSwitchActionDimmerItem;
 import org.openhab.binding.aleoncean.internal.converter.paramctypec.BooleanOnOffType;
 import org.openhab.binding.aleoncean.internal.converter.paramctypec.BooleanUpDownType;
 import org.openhab.binding.aleoncean.internal.converter.paramctypec.DoubleDecimalType;
@@ -82,6 +83,8 @@ public class ConverterFactory {
         list.add(OpenClosedContactItem.class);
 
         list.add(RockerSwitchActionRollerShutterItem.class);
+        
+        list.add(RockerSwitchActionDimmerItem.class);
 
         PARAMCITEMC = Collections.unmodifiableList(list);
     }
